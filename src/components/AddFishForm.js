@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
 
 class AddFishForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-  }
-  
-
   createFish = (e) => {
     e.preventDefault();
     console.log('gonna make some fish');
@@ -46,6 +38,10 @@ class AddFishForm extends Component {
       </div>
     );
   }
+}
+
+AddFishForm.propTypes = {
+  addFish: React.PropTypes.func.isRequired
 }
 
 export default AddFishForm;

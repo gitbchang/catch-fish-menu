@@ -103,10 +103,14 @@ class App extends React.Component {
           </ul>
         </div>
         <Order fishes={this.state.fishes} order={this.state.order} params={this.props.params} removeItem={this.removeFromOrder} />
-        <Inventory loadSamples={this.loadSamples} addFish={this.addFish} fishes={this.state.fishes} updateFish={this.updateFish} removeFish={this.removeFish} />
+        <Inventory loadSamples={this.loadSamples} addFish={this.addFish} fishes={this.state.fishes} updateFish={this.updateFish} removeFish={this.removeFish} storeId={this.props.params.storeId} />
       </div>
     )
   }
+}
+
+App.propTypes = {
+  params: React.PropTypes.object.isRequired
 }
 
 export default App;
